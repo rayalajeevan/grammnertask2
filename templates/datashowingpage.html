@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #sdata {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#sdata td, #sdata th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#sdata tr:nth-child(even){background-color: #f2f2f2;}
+
+#sdata tr:hover {background-color: #ddd;}
+
+#sdata th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+    </style>
+</head>
+<body>
+<table align="center" border="1px" id="sdata">
+    <tr>
+        <th>
+            NAME
+        </th>
+         <th>
+            AGE
+        </th>
+         <th>
+            GENDER
+        </th>
+
+    </tr>
+    {% for x in data %}
+        <tr>
+        <td>
+            {{ x.name }}
+        </td>
+        <td>
+            {{ x.age }}
+        </td>
+        <td>
+          {{ x.gender }}
+        </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

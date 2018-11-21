@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text{
+            border-radius: 8px;
+            width: 250px;
+            padding: 10px 10px 15px;
+            border-collapse: collapse;
+            margin-bottom: 8px;
+            margin-top: 3px;
+
+        }
+        .button{
+
+            border-radius: 8px;
+            width: 170px;
+            padding: 10px 10px 10px;
+            border-collapse: collapse;
+            background-color: azure;
+
+
+        }
+        </style>
+</head>
+<body>
+<table align="center">
+    <form action="/addstudent/" method="post">
+        {% csrf_token %}
+        <tr>
+            <td bgcolor="#ffe4c4" align="center">
+                <font >Adding student</font>
+            </td>
+        </tr>
+    <tr>
+        <td>
+        <input type="text" name="s_name" required placeholder="  Name" class="text">
+        </td>
+    </tr>
+         <tr>
+        <td>
+        <input type="number" name="s_age" required placeholder="  Age" class="text">
+        </td>
+    </tr>
+         <tr>
+        <td>
+        <input type="text" name="s_gender" required placeholder="  Gender" class="text">
+        </td>
+    </tr>
+        <tr>
+            <td align="center">
+                <input type="submit" value="AddNewStudent" class="button">
+            </td>
+        </tr>
+        <font color="green">{{ status }}</font>
+    </form>
+</table>
+<a href="/getdata/">Show Students</a><br>
+<a href="/home/">Home</a>
+</body>
+</html>
